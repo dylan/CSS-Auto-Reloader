@@ -2,41 +2,8 @@
 <html>
 <head>
   <title></title>
-  <script>
-    var isOn = false;
-    function startAutoReload (event) {
-      // console.log(event.name);
-      if(event.command !== "autoReload")
-        return;
-
-      if(isOn===false){
-        safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("autoReload", "start");
-        notify("CSS Auto Reload Started...");
-        isOn = true;
-      } else {
-        safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("autoReload", "stop");
-        notify("CSS Auto Reload Stopped...");
-        isOn = false;
-      }
-    }
-    function notify(message){
-      //Silencio if the browser doesn't like notifications
-      if(!window.Notification)
-        return;
-      if(Notification.permissionLevel()==='default') {
-        Notification.requestPermission(function() {
-          notify();
-        })
-      } else if(Notification.permissionLevel()==='granted'){
-        var n = new Notification(message)
-      } else if(Notification.permissionLevel()==='denied'){
-        return;
-      }
-    }
-    safari.application.addEventListener("command", startAutoReload, false);
-  </script>
+  <script src="global.js"></script>
 </head>
 <body>
-
 </body>
 </html>

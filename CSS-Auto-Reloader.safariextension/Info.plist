@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Dylan Wreggelsworth</string>
 	<key>Builder Version</key>
-	<string>8536.26.13</string>
+	<string>8536.26.14</string>
 	<key>CFBundleDisplayName</key>
 	<string>CSS Auto Reloader</string>
 	<key>CFBundleIdentifier</key>
@@ -28,13 +28,15 @@
 				<key>Identifier</key>
 				<string>autoReloadButton</string>
 				<key>Image</key>
-				<string>toolbar-icon.png</string>
+				<string>icon-toolbar.png</string>
 				<key>Include By Default</key>
 				<true/>
 				<key>Label</key>
+				<string>Start</string>
+				<key>Palette Label</key>
 				<string>Auto Reload CSS</string>
 				<key>Tool Tip</key>
-				<string>Fire!</string>
+				<string></string>
 			</dict>
 		</array>
 	</dict>
@@ -45,7 +47,7 @@
 			<key>End</key>
 			<array>
 				<string>css_auto-reload.js</string>
-				<string>initAuto.js</string>
+				<string>injected.js</string>
 			</array>
 		</dict>
 	</dict>
@@ -57,9 +59,15 @@
 	<dict>
 		<key>Website Access</key>
 		<dict>
+			<key>Include Secure Pages</key>
+			<true/>
 			<key>Level</key>
 			<string>All</string>
 		</dict>
 	</dict>
+	<key>Update Manifest URL</key>
+	<string>https://github.com/dylan/CSS-Auto-Reloader/raw/master/CSS-Auto-Reloader.safariextz</string>
+	<key>Website</key>
+	<string>http://dyli.sh</string>
 </dict>
 </plist>
